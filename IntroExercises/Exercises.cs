@@ -25,7 +25,16 @@ namespace IntroExercises
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
         {
-            return 0;
+            int count= 0;
+            for(int i=0; i<array.length; i++){
+                if (array[i]==value){
+                    count += 1;
+                }
+            }
+            if(array==null){
+                return count;
+            }
+            return count;
         }
 
         //TODO #3
