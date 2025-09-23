@@ -12,10 +12,14 @@ namespace IntroExercises
         //Find should return the position in array where value appears for the first time. -1 if the value isn't found or the array is empty/null
         public static int Find(int[] array, int value)
         {
-            for(int i=0; i<array.length; i++){
-                if (array[i]==value){
+            for (int i = 0; i < array.length; i++)
+            {
+                if (array[i] == value)
+                {
                     return i;
-                }else{
+                }
+                else
+                {
                     return -1;
                 }
             }
@@ -25,13 +29,16 @@ namespace IntroExercises
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
         {
-            int count= 0;
-            for(int i=0; i<array.length; i++){
-                if (array[i]==value){
+            int count = 0;
+            for (int i = 0; i < array.length; i++)
+            {
+                if (array[i] == value)
+                {
                     count += 1;
                 }
             }
-            if(array==null){
+            if (array == null)
+            {
                 return count;
             }
             return count;
@@ -42,19 +49,23 @@ namespace IntroExercises
         //-1 if endIndex is less than startIndex or any of them is outside the array
         public static int Find(int[] array, int value, int startIndex, int endIndex)
         {
-            if((startIndex>endIndex) || (endIndex>=array.length||startIndex>=array.length) || (startIndex<0||endIndex<0)){
+            if ((startIndex > endIndex) || (endIndex >= array.length || startIndex >= array.length) || (startIndex < 0 || endIndex < 0))
+            {
                 return -1;
             }
-            for(int i=startIndex; i<=endIndex; i++){
-                if (array[i]==value){
+            for (int i = startIndex; i <= endIndex; i++)
+            {
+                if (array[i] == value)
+                {
                     return i;
                 }
             }
-            if(array==null){
+            if (array == null)
+            {
                 return -1;
             }
             return -1;
-            
+
         }
 
         //TODO #4
@@ -64,15 +75,19 @@ namespace IntroExercises
         public static int Count(int[] array, int value, int startIndex, int endIndex)
         {
             int count = 0;
-            if((startIndex>endIndex) || (endIndex>=array.length||startIndex>=array.length) || (startIndex<0||endIndex<0)){
+            if ((startIndex > endIndex) || (endIndex >= array.length || startIndex >= array.length) || (startIndex < 0 || endIndex < 0))
+            {
                 return 0;
             }
-            for(int i=startIndex; i<=endIndex; i++){
-                if (array[i]==value){
-                    count+=1;
+            for (int i = startIndex; i <= endIndex; i++)
+            {
+                if (array[i] == value)
+                {
+                    count += 1;
                 }
             }
-            if(array==null){
+            if (array == null)
+            {
                 return 0;
             }
             return count;
@@ -88,14 +103,18 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
-            if (A==null || B==null){
-                    return false;
-                }
-            if (A.length==B.length){
-                for (int i=0; i<A.length; i++){
-                    count A = Count(A,A[i]);
-                    count B = Count(B,A[i]);
-                    if (count A != count B){
+            if (A == null || B == null)
+            {
+                return false;
+            }
+            if (A.length == B.length)
+            {
+                for (int i = 0; i < A.length; i++)
+                {
+                    count_A = Count(A, A[i]);
+                    count_B = Count(B, A[i]);
+                    if (count_A != count_B)
+                    {
                         return false;
                     }
                 }
@@ -103,4 +122,5 @@ namespace IntroExercises
             }
             return false;
         }
+    }
 }
