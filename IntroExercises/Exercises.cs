@@ -111,8 +111,8 @@ namespace IntroExercises
             {
                 for (int i = 0; i < A.length; i++)
                 {
-                    count_A = Count(A, A[i]);
-                    count_B = Count(B, A[i]);
+                    int count_A = Count(A, A[i]);
+                    int count_B = Count(B, A[i]);
                     if (count_A != count_B)
                     {
                         return false;
